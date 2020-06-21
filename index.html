@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating profile</title>
+    <link rel="stylesheet" href="_css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,600;1,700&family=Raleway:wght@400;600&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+    <h1 class="page-title">Let's set up your profile</h1>
+
+    <div id="progress-bar">
+        <p class="step">1</p>
+        <p class="step">2</p>
+        <p class="step">3</p>
+    </div>
+    
+    <section id="main">
+        <p id="content"  class="text-center">Step Number 1</p>
+
+        <form action="">
+
+            <fieldset id="first">
+                <h2>Personal information</h2>
+                <label for="name">Full name</label>
+                <input type="text" name="name" required>
+                <label for="age">Age</label>
+                <input type="number" name="age" required>
+                <label for="profession">Profession</label>
+                <input type="text" name="profession" required>
+            </fieldset>
+      
+            <fieldset id="second">
+                <h2>Tell something about yourself</h2>
+                <label for="about">Bio</label>
+                <textarea name="about" id="about" cols="30" rows="3" required></textarea>
+            </fieldset>
+      
+            <fieldset id="third">
+                <h2>What are some of your interests?</h2>
+                <label for="interest">1</label>
+                <input type="text" name="interest" required> 
+                <label for="interest[]">2</label>
+                <input type="text" name="interest" required>
+                <label for="interest[]">3</label>
+                <input type="text" name="interest" required>
+            </fieldset>
+
+            <div class="buttons">
+                <button id="previousBtn">Previous</button>
+                <button id="nextBtn" type="submit">Next</button>
+                <button id="finishBtn" type="submit">Finish</button>
+            </div>  
+      
+        </form>
+
+        <!-- <div class="buttons">
+            <button id="previousBtn">Previous</button>
+            <button id="nextBtn" type="submit">Next</button>
+            <button id="finishBtn" type="submit">Finish</button>
+        </div>     -->
+    </section>
+
+    </div>
+
+    <script src="_js/script.js"></script>
+    
+</body>
+
+</html>

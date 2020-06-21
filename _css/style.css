@@ -1,0 +1,205 @@
+
+body{
+    margin: 0;
+    background-color: #FBF2E8;
+}
+
+
+#progress-bar  {
+	display:  flex;
+	justify-content:  space-between;
+	align-items:  flex-end;
+	width:  300px;
+	margin:  0  auto;
+	margin-bottom:  40px;
+}
+
+.step {
+    text-align:  center;
+    border: 1px solid #4C4B85;
+    margin-bottom:  10px;
+	height: 40px;
+	width: 40px;
+	border-radius: 100%;
+	color: #4C4B85;
+	display: inline-block;
+	position: relative;
+	transition: background-color 500ms;
+    line-height:40px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+
+.step.completed  {
+	color:  white;
+	background-color: #4C4B85;
+}
+
+.step.completed::after {
+	content: '';
+	position: absolute;
+	right: -84px;
+	bottom: 20px;
+	height: 3px;
+	width: 80px;
+    background-color: #4C4B85;
+}
+
+#main h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+
+}
+
+#main form fieldset{
+    border: none;
+    margin: 1em 0;
+    padding: 0;
+}
+/* displaying the fieldsets one at a time */
+
+.hide{
+    display: none;
+}
+
+/* ------------------------------- */
+
+#main form fieldset label {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#main form input, textarea{
+    display: block;
+    width: 360px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 0.1px solid;
+    border-radius: 5px;
+    border-color: #DF8B90;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Base styles and helper stuff */
+.hidden  {
+	display:  none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+ 
+button  {
+	padding:  5px  10px;
+	border:  1px  solid  #4C4B85;
+    transition:  250ms background-color;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    background-color: none;
+}
+
+button:hover  {
+	cursor:  pointer;
+	background-color: #4C4B85;
+	color:  white;
+}
+
+button:disabled:hover  {
+	opacity:  0.5;
+	cursor:  not-allowed;
+}
+
+.page-title  {
+    text-align:  center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 36px;
+    font-weight: 100;
+}
+  
+.container  {
+	max-width:  400px;
+	margin:  0  auto;
+	margin-top:  20px;
+	padding:  0 40px 40px 40px;
+}
+/* ---------- styling profile page ---------- */
+
+img{
+    height: 23.2em;
+}
+
+.account-page .bio{
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    padding-bottom: 5px;
+}
+
+.account-page h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.account-page p {
+    font-family: 'Raleway', sans-serif;
+}
+
+.account-profile-info{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.account-profile-info h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin:0;
+    color:#4C4B85;
+}
+
+h1:nth-of-type(1){
+    padding-right: 50px;
+}
+
+.account-profile-info :nth-child(2){
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.account-profile-info p{
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    color: grey;
+    font-size: 16px;
+}
+
+.account-interests{
+    border-bottom: 1px solid;
+    margin-bottom: 2em;
+}
+
+.account-interests ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.account-interests li{
+    font-family: 'Raleway', sans-serif;
+    list-style: none;
+    background-color:#4C4B85;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+/* ------------------------------------------ */
