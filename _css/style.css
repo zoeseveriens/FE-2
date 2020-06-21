@@ -4,7 +4,25 @@ body{
     background-color: #FBF2E8;
 }
 
+.page-title  {
+    text-align:  center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 36px;
+    font-weight: 100;
+}
+  
+.container  {
+	max-width:  400px;
+	margin:  0  auto;
+	margin-top:  20px;
+	padding:  0 40px 40px 40px;
+}
 
+.step-number{
+    font-family: 'Raleway', sans-serif;
+}
+
+/* -------------styling progressbar------------------ */
 #progress-bar  {
 	display:  flex;
 	justify-content:  space-between;
@@ -44,7 +62,9 @@ body{
 	width: 80px;
     background-color: #4C4B85;
 }
+/* ------------------------------------- */
 
+/* -------------styling form------------------ */
 #main h2{
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
@@ -57,13 +77,10 @@ body{
     margin: 1em 0;
     padding: 0;
 }
-/* displaying the fieldsets one at a time */
 
 .hide{
     display: none;
 }
-
-/* ------------------------------- */
 
 #main form fieldset label {
     font-family: 'Montserrat', sans-serif;
@@ -71,7 +88,7 @@ body{
 
 #main form input, textarea{
     display: block;
-    width: 360px;
+    width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 0.1px solid;
@@ -80,10 +97,12 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
-/* Base styles and helper stuff */
-.hidden  {
+/* -------------------------------------------- */
+
+/* -------------styling buttons------------------ */
+/* .hidden  {
 	display:  none;
-}
+} */
 
 .buttons {
     display: flex;
@@ -112,19 +131,7 @@ button:disabled:hover  {
 	cursor:  not-allowed;
 }
 
-.page-title  {
-    text-align:  center;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 36px;
-    font-weight: 100;
-}
-  
-.container  {
-	max-width:  400px;
-	margin:  0  auto;
-	margin-top:  20px;
-	padding:  0 40px 40px 40px;
-}
+/* -------------------------------------------- */
 /* ---------- styling profile page ---------- */
 
 img{
