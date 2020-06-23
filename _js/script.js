@@ -10,6 +10,7 @@ const  bullets  =  [...document.querySelectorAll('.step')];
 const firstField = document.getElementById('first');
 const secondField = document.getElementById('second');
 const thirdField = document.getElementById('third');
+const form = document.getElementsByTagName('form');
 
 const max_step = 3; 
 let currentStep = 1; //Dit is let omdat de current step gaat veranderen en dus nooit constant blijft
@@ -18,13 +19,14 @@ let currentStep = 1; //Dit is let omdat de current step gaat veranderen en dus n
 function showFirstField(){
     secondField.classList.add("hide");
     thirdField.classList.add("hide");
+    previousBtn.disabled = true;
+    finishBtn.disabled = true;
 }
 
-
 function next () {
-    bullets[currentStep  -  1].classList.add('completed');
-	currentStep  +=  1;
-	previousBtn.disabled  =  false;
+    bullets[currentStep - 1].classList.add('completed');
+	currentStep += 1;
+	previousBtn.disabled = false;
      if (currentStep === 1){
         firstField.classList.remove("hide");
         secondField.classList.add("hide");
@@ -37,20 +39,20 @@ function next () {
         firstField.classList.add("hide");
         secondField.classList.add("hide");
         thirdField.classList.remove("hide");
-        nextBtn.disabled  =  true;
-		finishBtn.disabled  =  false;
+        nextBtn.disabled = true;
+		finishBtn.disabled = false;
     }
 
-    content.innerText  =  `Step Number ${currentStep}`;
+    content.innerText = `Step Number ${currentStep}`;
 };
 
 function previous () {
-    bullets[currentStep  -  2].classList.remove('completed');
-	currentStep  -=  1;
-	nextBtn.disabled  =  false;
-	finishBtn.disabled  =  true;
-	if  (currentStep  ===  1)  {
-        previousBtn.disabled  =  true;
+    bullets[currentStep - 2].classList.remove('completed');
+	currentStep -= 1;
+	nextBtn.disabled = false;
+	finishBtn.disabled = true;
+	if  (currentStep === 1)  {
+        previousBtn.disabled = true;
         firstField.classList.remove("hide");
         secondField.classList.add("hide");
         thirdField.classList.add("hide");
@@ -64,7 +66,7 @@ function previous () {
         thirdField.classList.remove("hide");
     }
 
-    content.innerText  =  `Step Number ${currentStep}`;
+    content.innerText = `Step Number ${currentStep}`;
  };
 
 
@@ -77,7 +79,7 @@ previousBtn.addEventListener('click', previous)
 finishBtn.addEventListener('click', over)
 window.addEventListener('load', showFirstField);
 
-//pseudo code
+/* pseudo code */
 //Als default staat class hide op secondField en thirdField  (je bent dus bij stap 1)
 //eventlistener zonder knop?
 
@@ -91,6 +93,7 @@ window.addEventListener('load', showFirstField);
 //firstField & secondField .classList add hide
 //thirdField .classlist remove hide
 
+/* Bronenn */
 //https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
 // ik heb hier window.addEventListener('load', event) vandaan gehaald
 

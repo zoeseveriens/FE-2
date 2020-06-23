@@ -213,4 +213,16 @@ h1:nth-of-type(1){
     font-size: 14px;
     margin-bottom: 10px;
 }
+
+#update-btn{
+    padding:  6px  10px;
+    background-color: #4C4B85;
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    background-color: none;
+    text-decoration: none;
+}
 /* ------------------------------------------ */
