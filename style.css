@@ -82,6 +82,10 @@ body{
     display: none;
 }
 
+.display{
+    display: block;
+}
+
 #main form fieldset label {
     font-family: 'Montserrat', sans-serif;
 }
