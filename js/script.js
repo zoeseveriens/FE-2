@@ -6,7 +6,7 @@ const  previousBtn  =  document.getElementById('previousBtn');
 const  nextBtn  =  document.getElementById('nextBtn');
 const  finishBtn  =  document.getElementById('finishBtn');
 const  content  =  document.getElementById('content');
-const  bullets  =  [...document.querySelectorAll('.step')];
+const  bullets  =  [...document.querySelectorAll('.step')]; // stopt alle bullets in een array
 const firstField = document.getElementById('first');
 const secondField = document.getElementById('second');
 const thirdField = document.getElementById('third');
@@ -25,7 +25,7 @@ function showFirstField(){
 
 function next () {
     bullets[currentStep - 1].classList.add('completed');
-	currentStep += 1;
+	currentStep ++;
 	previousBtn.disabled = false;
      if (currentStep === 1){
         firstField.classList.remove("hide");
@@ -48,7 +48,7 @@ function next () {
 
 function previous () {
     bullets[currentStep - 2].classList.remove('completed');
-	currentStep -= 1;
+	currentStep --;
 	nextBtn.disabled = false;
 	finishBtn.disabled = true;
 	if  (currentStep === 1)  {
