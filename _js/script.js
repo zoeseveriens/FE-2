@@ -15,6 +15,11 @@ const max_step = 3;
 let currentStep = 1; //Dit is let omdat de current step gaat veranderen en dus nooit constant blijft
 
 
+function showFirstField(){
+    secondField.classList.add("hide");
+    thirdField.classList.add("hide");
+}
+
 
 function next () {
     bullets[currentStep  -  1].classList.add('completed');
@@ -62,7 +67,7 @@ function previous () {
     content.innerText  =  `Step Number ${currentStep}`;
  };
 
-https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link
+
 function over () {
     location.href='profile.html';
 };
@@ -70,10 +75,11 @@ function over () {
 nextBtn.addEventListener('click', next)
 previousBtn.addEventListener('click', previous)
 finishBtn.addEventListener('click', over)
+window.addEventListener('load', showFirstField);
 
 //pseudo code
 //Als default staat class hide op secondField en thirdField  (je bent dus bij stap 1)
-//dit gebeurd al in de html
+//eventlistener zonder knop?
 
 //Wanneer je op stap 2 bent gaan firstField en thirdField op hide, secondField gaat van hide af
 //if currentStep === 2
@@ -84,5 +90,11 @@ finishBtn.addEventListener('click', over)
 //if currentStep === 3
 //firstField & secondField .classList add hide
 //thirdField .classlist remove hide
+
+//https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
+// ik heb hier window.addEventListener('load', event) vandaan gehaald
+
+//https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link
+// ik heb hier location.href = '' vandaag gehaald
 
 
